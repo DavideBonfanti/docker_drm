@@ -1,13 +1,13 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
-# DRM website: https://www.dell.com/support/home/en-us/Drivers/DriversDetails?driverid=HHV83
+# DRM website: https://www.dell.com/support/home/en-us/drivers/driversdetails?driverId=JKGDG
 
 # Install needed tools, clean up, download and install DRM, clean up
 RUN apt-get update && \
     apt-get install -y wget socat file && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
-    wget -U drm -O drm.bin https://dl.dell.com/FOLDER10693640M/1/DRMInstaller_3.4.4.908.bin && \
+    wget -U drm -O drm.bin https://dl.dell.com/FOLDER12250617M/1/DRMInstaller_3.4.7.970.bin && \
     sh drm.bin -i silent && \
     rm -rf /tmp/*
 
