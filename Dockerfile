@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get install -y wget socat file && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
-    wget -U drm -O drm.bin https://dl.dell.com/FOLDER12250617M/1/DRMInstaller_3.4.7.970.bin && \
+    wget -U drm -O drm.bin https://downloads.dell.com/FOLDER12894273M/1/DRMInstaller_3.4.8.1086.bin && \
     sh drm.bin -i silent && \
     rm -rf /tmp/*
 
